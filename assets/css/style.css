@@ -1,7 +1,16 @@
 /******************** Custom Properties ************************/
         /* Aqui van los tipos de fuentes y los colores en variables */
-
-
+        .mooli-regular {
+          font-family: "Mooli", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+        
+        :root {
+          --color_one: #141414;
+          --color_two: #000;
+          --color_three: #fff;
+        }
 /* ******************** Fluid Design ******************** */
 /* @link https://utopia.fyi/type/calculator?c=320,17,1.125,1920,20,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 :root {
@@ -23,6 +32,8 @@ html {
     text-size-adjust: 100%;
     font-size: 16px;
     scroll-behavior: smooth;
+    background-color: var(--color_two);
+
   }
   *,
   *:before,
@@ -30,11 +41,11 @@ html {
     box-sizing: inherit;
   }
 
-body {
- margin: 0;
- width: 100%;
- min-height: 100vh;
- display: flex;
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
  flex-direction: column;
  line-height: 1.6;
  text-rendering: optimizeLegibility;
@@ -72,6 +83,58 @@ blockquote {
 
 /******************** Utilities   ************************/ 
         /* Aqui van las cosas que se pueden reciclar */
+.item-nav{
+  background-color: #484848;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 50%;
+  height:  auto;
+  border-radius: 10%;
+  font-size: 1.5rem;
+  margin: 1rem;
+
+}
 
 /******************** Site Styles ************************/ 
         /* Aqui van los estilos del sitio web */
+.background-font{
+  color: var(--color_three);
+  margin: 1.2rem;
+  background-color: var(--color_one);
+  border-radius: 10%;
+  height: auto;
+  width: auto;
+}
+a{
+  text-decoration: none;
+  color: var(--color_three);
+}
+.Logo-text>img{
+  border-radius: 50%;
+  height: auto;
+  width: 16rem;
+}
+.nav{
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+.Logo-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.principal-title{
+  text-align: center;
+}
+.nav>section{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+
+}
