@@ -1,0 +1,62 @@
+/******************** Custom Properties ************************/
+        /* Aqui van los tipos de fuentes y los colores en variables */
+
+/******************** Reset    ******************/ 
+            /* Esto no se toca */
+html {
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body {
+ margin: 0;
+ width: 100%;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ line-height: 1.6;
+ text-rendering: optimizeLegibility;
+ overflow-x: hidden;
+ font-size: calc(14px+(18-14)*((100vw-300px)/(1400-300)));
+}
+
+iframe,
+video {
+ width: 100%;
+ height: calc((100vw - 4rem) * (9 / 16));
+ max-height: calc(800px * 9 / 16);
+ aspect-ratio: 16 / 9;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+}
+
+blockquote p,
+figure {
+ margin: 0;
+}
+
+blockquote {
+ padding: 0.5rem 1.5rem;
+ border-left: medium solid var(--primary-color);
+ opacity: 0.75;
+}
+
+
+/******************** Components  ************************/ 
+            /* Aqui van las librerias */
+
+/******************** Utilities   ************************/ 
+        /* Aqui van las cosas que se pueden reciclar */
+
+/******************** Site Styles ************************/ 
+        /* Aqui van los estilos del sitio web */
