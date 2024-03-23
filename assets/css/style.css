@@ -43,6 +43,7 @@ html {
 
 body {
   margin: 0;
+  padding: 5rem;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -160,13 +161,20 @@ a {
 
 .parrafo1 {
   width: 45%;
-  height: 40vh;
+  height: auto;
   border-radius: 10%;
   background-color: var(--color_one);
+  text-align: center;
 }
 .parrafo1 p {
-  padding: 1rem;
+  font-size: large;
+  padding: 2rem;
   text-align: justify;
+}
+.parrafo1>img{
+  width: 16rem;
+  height: auto;
+  border-radius: 50%;
 }
 
 /* Estilos Seccion 3 */
