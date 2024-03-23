@@ -44,6 +44,7 @@ html {
 body {
   margin: 0;
   padding: 5rem;
+  padding-bottom: .5rem;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -92,7 +93,8 @@ blockquote {
   padding: 0.4rem;
   width: calc(100% / 3.5);
   height: auto;
-  font-size: 1.3rem;
+  font-size: large;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -280,6 +282,6 @@ footer {
 
 .derechos {
   text-align: center;
-  margin-top: 1rem;
-  font-size: 0.8rem;
+  margin-top: 2.5rem;
+  font-size: 1rem;
 }
