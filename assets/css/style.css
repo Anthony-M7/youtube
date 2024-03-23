@@ -1,140 +1,277 @@
 /******************** Custom Properties ************************/
-        /* Aqui van los tipos de fuentes y los colores en variables */
-        .mooli-regular {
-          font-family: "Mooli", sans-serif;
-          font-weight: 400;
-          font-style: normal;
-        }
-        
-        :root {
-          --color_one: #141414;
-          --color_two: #000;
-          --color_three: #fff;
-        }
+/* Aqui van los tipos de fuentes y los colores en variables */
+.mooli-regular {
+  font-family: "Mooli", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color_one: #141414;
+  --color_two: #000;
+  --color_three: #fff;
+}
 /* ******************** Fluid Design ******************** */
 /* @link https://utopia.fyi/type/calculator?c=320,17,1.125,1920,20,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 :root {
-    --step--2: clamp(0.7rem, calc(0.87rem + -0.14vw), 0.84rem);
-    --step--1: clamp(0.94rem, calc(0.95rem + -0.01vw), 0.94rem);
-    --step-0: clamp(1.06rem, calc(1.03rem + 0.19vw), 1.25rem);
-    --step-1: clamp(1.2rem, calc(1.1rem + 0.47vw), 1.67rem);
-    --step-2: clamp(1.35rem, calc(1.17rem + 0.88vw), 2.22rem);
-    --step-3: clamp(1.51rem, calc(1.22rem + 1.45vw), 2.96rem);
-    --step-4: clamp(1.7rem, calc(1.25rem + 2.25vw), 3.95rem);
-    --step-5: clamp(1.91rem, calc(1.25rem + 3.35vw), 5.26rem);
-    --step-6: clamp(2.15rem, calc(1.18rem + 4.86vw), 7.01rem);
-  }
-  
-/******************** Reset    ******************/ 
-            /* Esto no se toca */
+  --step--2: clamp(0.7rem, calc(0.87rem + -0.14vw), 0.84rem);
+  --step--1: clamp(0.94rem, calc(0.95rem + -0.01vw), 0.94rem);
+  --step-0: clamp(1.06rem, calc(1.03rem + 0.19vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.1rem + 0.47vw), 1.67rem);
+  --step-2: clamp(1.35rem, calc(1.17rem + 0.88vw), 2.22rem);
+  --step-3: clamp(1.51rem, calc(1.22rem + 1.45vw), 2.96rem);
+  --step-4: clamp(1.7rem, calc(1.25rem + 2.25vw), 3.95rem);
+  --step-5: clamp(1.91rem, calc(1.25rem + 3.35vw), 5.26rem);
+  --step-6: clamp(2.15rem, calc(1.18rem + 4.86vw), 7.01rem);
+}
+
+/******************** Reset    ******************/
+/* Esto no se toca */
 html {
-    box-sizing: border-box;
-    text-size-adjust: 100%;
-    font-size: 16px;
-    scroll-behavior: smooth;
-    background-color: var(--color_two);
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--color_two);
+  color: var(--color_three);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-
-  body {
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
- flex-direction: column;
- line-height: 1.6;
- text-rendering: optimizeLegibility;
- overflow-x: hidden;
- font-size: calc(14px+(18-14)*((100vw-300px)/(1400-300)));
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-size: calc(14px+ (18-14) * ((100vw-300px) / (1400-300)));
 }
 
 iframe,
 video {
- width: 100%;
- height: calc((100vw - 4rem) * (9 / 16));
- max-height: calc(800px * 9 / 16);
- aspect-ratio: 16 / 9;
+  width: 100%;
+  height: calc((100vw - 4rem) * (9 / 16));
+  max-height: calc(800px * 9 / 16);
+  aspect-ratio: 16 / 9;
 }
 
 img {
- max-width: 100%;
- height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 blockquote p,
 figure {
- margin: 0;
+  margin: 0;
 }
 
 blockquote {
- padding: 0.5rem 1.5rem;
- border-left: medium solid var(--primary-color);
- opacity: 0.75;
+  padding: 0.5rem 1.5rem;
+  border-left: medium solid var(--primary-color);
+  opacity: 0.75;
 }
 
+/******************** Components  ************************/
+/* Aqui van las librerias */
 
-/******************** Components  ************************/ 
-            /* Aqui van las librerias */
-
-/******************** Utilities   ************************/ 
-        /* Aqui van las cosas que se pueden reciclar */
-.item-nav{
+/******************** Utilities   ************************/
+/* Aqui van las cosas que se pueden reciclar */
+.item-nav {
   background-color: #484848;
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  width: 50%;
-  height:  auto;
-  border-radius: 10%;
-  font-size: 1.5rem;
-  margin: 1rem;
-
+  align-items: center;
+  text-align: center;
+  padding: 0.4rem;
+  width: calc(100% / 3.5);
+  height: auto;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
-/******************** Site Styles ************************/ 
-        /* Aqui van los estilos del sitio web */
-.background-font{
+/******************** Site Styles ************************/
+/* Aqui van los estilos del sitio web */
+.background-font {
   color: var(--color_three);
-  margin: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: var(--color_one);
   border-radius: 10%;
-  height: auto;
-  width: auto;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-a{
+a {
   text-decoration: none;
   color: var(--color_three);
 }
-.Logo-text>img{
+.Logo-text > img {
   border-radius: 50%;
   height: auto;
   width: 16rem;
 }
-.nav{
-  height: auto;
-  width: auto;
+.nav {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.Logo-text{
+.Logo-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.principal-title{
+.principal-title {
   text-align: center;
 }
-.nav>section{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: center;
 
+/* Estilos Seccion 2 */
+
+.title-section {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.flex-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  justify-content: space-around;
+}
+
+.parrafo1 {
+  width: 45%;
+  height: 40vh;
+  border-radius: 10%;
+  background-color: var(--color_one);
+}
+.parrafo1 p {
+  padding: 1rem;
+  text-align: justify;
+}
+
+/* Estilos Seccion 3 */
+.section3 {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-font {
+  height: 70vh;
+  width: 80%;
+  background-color: var(--color_one);
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carrusel {
+  width: 70%;
+  height: 50vh;
+  background-color: #ffffff;
+  border-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carrusel h3 {
+  color: #000;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* EStilos seccion 4 */
+
+.section4 {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-font2 {
+  height: 70vh;
+  width: 80%;
+
+  margin: 0 auto;
+  border-radius: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-font2 h2 {
+  font-size: 3rem;
+}
+.carrusel2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+/* Estilos Footer */
+footer {
+  width: 100%;
+}
+
+.fot-flex-row {
+  width: 95%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.fot-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.fot-flex-column h3 {
+  font-size: 1.4rem;
+}
+
+.fot-flex-column a,
+.fot-flex-column p {
+  opacity: 50%;
+  margin: 0;
+}
+
+.derechos {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
 }
