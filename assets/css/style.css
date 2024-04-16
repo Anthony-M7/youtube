@@ -43,8 +43,9 @@ html {
 
 body {
   margin: 0;
-  padding: 5rem;
-  padding-bottom: .5rem;
+  padding: 12rem;
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -53,6 +54,7 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   font-size: calc(14px+ (18-14) * ((100vw-300px) / (1400-300)));
+
 }
 
 iframe,
@@ -82,6 +84,7 @@ blockquote {
 /******************** Components  ************************/
 /* Aqui van las librerias */
 
+
 /******************** Utilities   ************************/
 /* Aqui van las cosas que se pueden reciclar */
 .item-nav {
@@ -98,15 +101,61 @@ blockquote {
   margin-bottom: 1rem;
 }
 
+a {
+  display: inline-block;
+  position: relative;
+  color: #333;
+  text-decoration: none;
+}
+a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  transition: all 0.8s;
+}
+a:hover:after {
+  width: 100%;
+  background: var(--color_three);
+}
+
+/* Enlace para regresar */
+.button_back{
+  width: 20%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--color_one);
+  border-radius: 50px;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.button_back>img{
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+}
+
 /******************** Site Styles ************************/
 /* Aqui van los estilos del sitio web */
+.title_h2 {
+  text-align: center;
+  font-size: 3rem;
+  width: auto;
+}
+.title_h6 {
+  text-align: center;
+  font-size: large;
+}
 .background-font {
   color: var(--color_three);
   margin-top: 2rem;
   margin-bottom: 2rem;
   background-color: var(--color_one);
   border-radius: 10%;
-  height: 90vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -173,7 +222,7 @@ a {
   padding: 2rem;
   text-align: justify;
 }
-.parrafo1>img{
+.parrafo1 > img {
   width: 16rem;
   height: auto;
   border-radius: 50%;
@@ -181,25 +230,28 @@ a {
 
 /* Estilos Seccion 3 */
 .section3 {
-  height: 100vh;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .bg-font {
-  height: 70vh;
   width: 80%;
+  height: 30vh;
   background-color: var(--color_one);
   margin: 0 auto;
-  margin-top: 2rem;
   border-radius: 3rem;
-
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
+.bg-font > a > img {
+  width: 10rem;
+  height: auto;
+}
+
 .carrusel {
   width: 70%;
   height: 50vh;
@@ -310,4 +362,32 @@ footer {
   text-align: center;
   margin-top: 2.5rem;
   font-size: 1rem;
+}
+
+/* cards de contenido  de youtube*/
+.flex_content{
+  display: flex;
+  width: auto;
+  height: auto; 
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 5rem;
+}
+.flex_content>section>iframe{
+  width: 300px;
+  height: 200px;
+}
+.content-card{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 20px;
+  border: .1px var(--color_three) solid;
+  border-radius: 30px;
+}
+.content-card>h2,p{
+  margin: 0;
+  padding: 0;
 }
