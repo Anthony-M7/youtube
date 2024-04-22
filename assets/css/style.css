@@ -54,7 +54,6 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   font-size: calc(14px+ (18-14) * ((100vw-300px) / (1400-300)));
-
 }
 
 iframe,
@@ -83,7 +82,6 @@ blockquote {
 
 /******************** Components  ************************/
 /* Aqui van las librerias */
-
 
 /******************** Utilities   ************************/
 /* Aqui van las cosas que se pueden reciclar */
@@ -121,7 +119,7 @@ a:hover:after {
 }
 
 /* Enlace para regresar */
-.button_back{
+.button_back {
   width: 20%;
   height: auto;
   display: flex;
@@ -132,7 +130,7 @@ a:hover:after {
   font-size: 1.5rem;
   padding: 10px;
 }
-.button_back>img{
+.button_back > img {
   height: 80px;
   width: 80px;
   border-radius: 100%;
@@ -365,29 +363,31 @@ footer {
 }
 
 /* cards de contenido  de youtube*/
-.flex_content{
+
+.flex_content {
   display: flex;
   width: auto;
-  height: auto; 
+  height: auto;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 5rem;
 }
-.flex_content>section>iframe{
+.flex_content > section > iframe {
   width: 300px;
   height: 200px;
 }
-.content-card{
+.content-card {
   width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
   margin: 1rem;
   padding: 20px;
-  border: .1px var(--color_three) solid;
+  border: 0.1px var(--color_three) solid;
   border-radius: 30px;
 }
-.content-card>h2,p{
+.content-card > h2,
+p {
   margin: 0;
   padding: 0;
 }
