@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color_one: #141414;
+  --color_one: #161616;
   --color_two: #000;
   --color_three: #fff;
 }
@@ -32,7 +32,7 @@ html {
   text-size-adjust: 100%;
   font-size: 16px;
   scroll-behavior: smooth;
-  background-color: var(--color_two);
+  background-color: var(--color_one);
   color: var(--color_three);
 }
 *,
@@ -86,17 +86,23 @@ blockquote {
 /******************** Utilities   ************************/
 /* Aqui van las cosas que se pueden reciclar */
 .item-nav {
-  background-color: #484848;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 0.4rem;
-  width: calc(100% / 3.5);
-  height: auto;
-  font-size: large;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  background-image: linear-gradient(
+    32deg,
+    rgba(8, 8, 8, 0.74) 30px,
+    transparent
+  );
+  background-size: 60px 60px;
+  background-position: -5px -5px;
 }
 
 a {
@@ -149,9 +155,9 @@ a:hover:after {
 }
 .background-font {
   color: var(--color_three);
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  background-color: var(--color_one);
+  /* background-color: var(--color_one); */
   border-radius: 10%;
   height: auto;
   width: 100%;
@@ -169,12 +175,14 @@ a {
   width: 16rem;
 }
 .nav {
-  width: 80%;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  width: auto;
+  height: auto;
+  background-color: #1f1f1f;
+  border-radius: 10px;
 }
 .Logo-text {
   display: flex;
@@ -234,6 +242,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .bg-font {
   width: 80%;
   height: 30vh;
@@ -462,39 +471,32 @@ p {
   background: #000;
 }
 
-/* Estilos de la seccion herramientas */
+/* Estilos Para la seccion de Herramientas -- Favor no borrar (EBER 😡👀) */
 
-.body-herramientas {
-  max-height: 100vh;
-}
-
-.tools-content {
-  border-radius: 4rem;
-  padding: 1.5rem;
-}
-
-.svg {
-  width: 100%;
-  height: auto;
+.content-tools {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  a {
+    margin: 1.3rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  svg {
+    width: 25%;
+    margin: 3rem;
+    margin-top: 0;
+  }
+
+  p {
+    width: 75%;
+    text-align: justify;
+    font-size: 1.05rem;
+    margin-top: 1rem;
+  }
 }
 
-.svg * {
-  margin: 1rem;
-}
-
-.svg a {
-  font-size: 1.5rem;
-}
-
-.svg p {
-  width: 70%;
-  text-align: justify;
-}
-
-.svg svg {
-  width: 15%;
-}
+/* redes sociales */
